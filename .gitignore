@@ -1,0 +1,50 @@
+# Credentials & secrets
+service_account.json
+
+# Environnement Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers de backup
+*.bak
+*.bak_*
+
+# Base de données SQLite (runtime)
+*.db
+
+# Données runtime (CSV, logs)
+*.csv
+*.log
+log.txt
+log_requete.txt
+logs/
+
+# Fichiers d'état runtime (JSON générés)
+*_etat.json
+*_etat_test.json
+ange_watch_etat.json
+suivi_etat.json
+code_etat.json
+chasse_jour.json
+malus.json
+dettes_redistrib.json
+convois_*.json
+convois_mode.txt
+convois_pages_mode.txt
+convois_reponses_mode.txt
+convois_forms_mode.txt
+convois_tdclive_mode.txt
+
+# Fichiers texte runtime
+convois_arrivants_t.txt
+convois_suivi_chaine_t.txt
+
+# Sauvegardes ponctuelles
+sauvegarde_*.json
+sauvegardes_convois/
+sim_nuit_*.json
+
+# Notes activité runtime
+notes_activite.db

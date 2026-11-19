@@ -1,0 +1,29 @@
+# ange_watch.ini — Configuration du suivi ANGE
+# Copier ce fichier en "ange_watch.ini" et remplir les valeurs.
+# NE JAMAIS COMMITER ange_watch.ini (il contient des secrets).
+
+[general]
+alliance = ANGE
+; Perte d'un joueur ANGE plus petite que ça (cases) ignorée dans les alertes
+seuil_perte = 1000
+; Alliance mise en avant dans les alertes (en plus de toutes les alliances analysées)
+surveiller = TAXE
+; Chasseurs : leurs gains ne sont pas comptés comme échanges de TDC
+; (Si sheet_chaine_id est renseigné, la liste réelle est lue depuis le sheet privé)
+chasseurs = Cylo, Fannou, Fhezz, FourmiDiable, Judalos, Kalipzio, LaVague, Scooby-Doo, Shaka, Tatsuo, Zorka, mousse85, willo
+; Seuils d'alerte Discord (en cases de TDC)
+seuil_alerte_sortant = 20000
+seuil_alerte_taxe = 5000
+seuil_alerte_inconnu = 40000
+
+[google]
+; ID du Google Sheet "Suivi ANGE" (onglet Requête, Flux TDC, etc.)
+sheet_id = REMPLACER_PAR_ID_SHEET_SUIVI
+; Optionnel : ID du sheet privé (pour lire la liste des chasseurs automatiquement)
+sheet_chaine_id =
+; Chemin vers la clé JSON du compte de service Google
+credentials = service_account.json
+
+[discord]
+; URL du webhook Discord pour les alertes (laisser vide pour désactiver)
+webhook =

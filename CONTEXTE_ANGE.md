@@ -1,6 +1,6 @@
 # Contexte Fourmizzz — a lire en premier
 
-Derniere mise a jour : 13/11/2026.
+Derniere mise a jour : 23/11/2026.
 
 ## 1. Le jeu (Fourmizzz, serveur S5)
 
@@ -66,3 +66,9 @@ Derniere mise a jour : 13/11/2026.
   - Delta > 0 (grenier) : livre `montant_par_jour` de moins chaque jour.
 - **Activation** : decommenter `MALUS_HOOK` et `MALUS_TICK` dans `ange_convois_ecr.py` (2 lignes).
 - **CLI** : `python3 ange_convois_malus.py action=ajouter pseudo=X montant=N jours=N [raison=texte]`
+## 9. Corrections et incidents notables
+
+- **23/11/2026 — Bug fusion P7+P8** : suppression de "Passeur 8" de N.POSTES avait rendu 9 destinataires (Bomric, Wiwi, Tontonlaitue, etc.) invisibles au code → lignes de livraison retirées des onglets greniers et mises en parking. Corrections :
+  - "Passeur 8" remis dans POSTES (`ange_convois_nuit.py`) — la fusion doit être gérée dans la feuille
+  - `signature()` utilise désormais `m["g"]` (groupe fichier) plutôt que le poste exact (`ange_convois_tick.py`) — un renommage de poste dans le même fichier ne déclenche plus de purge
+  - Restauration des 9 lignes depuis convois_parking_prod.json (breto→Bomric coché ✓, Octo→Tontonlaitue 3 envois ✓, etc.)

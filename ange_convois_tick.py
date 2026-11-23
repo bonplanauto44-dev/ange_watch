@@ -19,7 +19,9 @@ def mode():
 
 
 def signature(membres):
-    return sorted((m["pseudo"], m["poste"], bool(m["hors"]), bool(m["seul"])) for m in membres)
+    # Groupe (fichier : 3.1/3.2/3.3) au lieu du poste exact : un renommage de poste
+    # dans le même fichier (ex. Passeur 8 → Passeur 7) ne déclenche plus de purge des convois.
+    return sorted((m["pseudo"], m["g"], bool(m["hors"]), bool(m["seul"])) for m in membres)
 
 
 def differences(avant, apres):

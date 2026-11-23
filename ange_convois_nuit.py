@@ -11,7 +11,7 @@ TITRE_JOUR = "📦 Tes livraisons du jour"
 TITRE_INACTIF = "📦 Pas de convoi pour le moment : ils démarreront dès que chacun sera à sa place."
 PROFIL_URL = "https://s5.fourmizzz.fr/Membre.php?Pseudo="
 POSTES = ["Grenier 1", "Grenier 2", "Grenier 3", "Grenier 4", "Grenier 5", "Passeur 1", "Passeur 2", "Passeur 3", "Passeur 4",
-          "Passeur 5", "Passeur 6", "Passeur 7", "Passeur 8", "Chasseur"]
+          "Passeur 5", "Passeur 6", "Passeur 7", "Passeur 8", "Chasseur"]  # Passeur 8 maintenu — fusion gérée dans la feuille
 FICHIERS = {"3.1": "Greniers", "3.2": "Passeurs", "3.3": "Chasseurs"}
 
 
